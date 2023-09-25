@@ -1,4 +1,7 @@
-# Xilinx FPGA and Firmware Demonstration Project
+# PYNQ-Z2 FPGA and firmware demonstration project (firmware logic)
+
+Built using the Xilinx toolchain/toolsuite.  
+Should also be portable to other ZYNQ XC7Z020 compatible boards.  
 
 ## Purpose
 
@@ -20,6 +23,6 @@ Once you have built the firmware and deployed it to the board, you can select th
 
 If you connect a [serial terminal](./docs/docs.md#firmware-project---connect-a-serial-terminal), you will also see some output.
 
-<img src="./docs/image-2.png" width="800" />
+<img src="./docs/teraterm-output.png" width="800" />
 
 If you're having issues setting up or running the project, you may want consider starting with [this project](https://github.com/mpab-fpga/pynq_z2_led_switcher) which has a more comprehensive walkthrough and no dependencies on firmware.

@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-- Xilinx tool-suite
+- Xilinx toolsuite
 - PYNQ-Z2 board (or ZYNQ XC7Z020 compatible)
 
 ## Manifest
@@ -35,8 +35,6 @@ pynq_z2_led_switcher_ps/
 ```
 
 ### Post checkout - Generate the fpga and firmware project files
-
-
 
 - Windows: open a command prompt in the project root
 
@@ -92,7 +90,7 @@ The TUL PYNQ-Z2 board file is included to make this project as self-contained as
 
 ## FPGA Project
 
-## FPGA Project - Design cribbed from [here](https://discuss.pynq.io/t/tutorial-creating-a-hardware-design-for-pynq/145)
+### FPGA Project - Design cribbed from [here](https://discuss.pynq.io/t/tutorial-creating-a-hardware-design-for-pynq/145)
 
 <img src="./block_design.png" width="1024" />
 
@@ -110,7 +108,7 @@ The TUL PYNQ-Z2 board file is included to make this project as self-contained as
     - leds -> leds_4bits
     - switches -> sws_2bits
 
-<img src="./image.png" width="480" />
+<img src="./connection-automation-gpio.png" width="480" />
 
 - Create HDL Wrapper
 - Generate Bitstream
@@ -142,7 +140,7 @@ The application has four modes (states), selected by the DIP switches
   - no flow control
 - or use Tera Term
 
-<img src="./image-1.png" width="800" />
+<img src="./teraterm-cfg.png" width="800" />
 
 ## Firmware Project - Python Application (TODO...)
 
@@ -169,14 +167,9 @@ while(not switches.read()):
 
 ## References
 
-<https://discuss.pynq.io/t/tutorial-creating-a-hardware-design-for-pynq/145>
-
-<https://discuss.pynq.io/t/tutorial-using-a-new-hardware-design-with-pynq-axi-gpio/146>
-
-<https://digilent.com/reference/programmable-logic/guides/vitis-create-blinky-software>
-
-<https://forum.digilent.com/topic/20577-arty-a7-basic-io-problem/>
-
-<https://digilent.com/reference/programmable-logic/guides/getting-started-with-ipi?redirect=1#create_a_main_c_source_to_control_axi_gpio_peripherals>
-
+<https://discuss.pynq.io/t/tutorial-creating-a-hardware-design-for-pynq/145>  
+<https://discuss.pynq.io/t/tutorial-using-a-new-hardware-design-with-pynq-axi-gpio/146>  
+<https://digilent.com/reference/programmable-logic/guides/vitis-create-blinky-software>  
+<https://forum.digilent.com/topic/20577-arty-a7-basic-io-problem/>  
+<https://digilent.com/reference/programmable-logic/guides/getting-started-with-ipi?redirect=1#create_a_main_c_source_to_control_axi_gpio_peripherals>  
 <https://www.avnet.com/opasdata/d120001/medias/docus/3/SILICA_Xilinx_Zynq_ZedBoard_Vivado_Workshop_ver1.0.pdf>
