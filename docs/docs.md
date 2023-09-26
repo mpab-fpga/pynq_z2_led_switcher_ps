@@ -64,21 +64,15 @@ None required
 
 ### Firmware - post-generation fixes
 
-Open a Vitis workspace in ./firmware
+Fix the Boot Image in the system project
 
-- _pfm project
-  - Update Hardware Specification
-    - Navigate to FPGA xsa file
-    - (relative paths work in scripts, not the IDE)
-  - Build Project
-- _application project: Build Project
-- _sysproject
-  - In Explorer, right click $NAME_app_system-> Create Boot Image
-  - We need 3 boot image partitions
-    - (bootloader): ./firmware/\$BOARD_pfm/export/\$BOARD_pfm/sw/\$BOARD_pfm/boot/fsb.elf
-    - bitstream: ./fpga/fpga.runs/impl_1/\*.bit <-- **Important!** Use the fpga project bitstream to ensure changes stay in synch
-    - \$APP.elf: ./firmware/\$APP_app/Debug/\$APP_app.elf
-  - -> Create Image
+- Open a Vitis workspace in ./firmware
+- In Explorer, right click $NAME_app_system-> Create Boot Image
+- We need 3 boot image partitions
+  - (bootloader): ./firmware/\$BOARD_pfm/export/\$BOARD_pfm/sw/\$BOARD_pfm/boot/fsb.elf
+  - bitstream: ./fpga/fpga.runs/impl_1/\*.bit <-- **Important!** Use the fpga project bitstream to ensure changes stay in synch
+  - \$APP.elf: ./firmware/\$APP_app/Debug/\$APP_app.elf
+- -> Create Image
 
 ## Notes
 

@@ -1,5 +1,5 @@
 ###############################################################################
-# @file create-platform.tcl
+# @file create-firmware.tcl
 #  Author: mpab
 #
 ###############################################################################
@@ -50,8 +50,9 @@ setws ./
 # create platform project
 puts "creating platform $PLATFORM"
 
+set xsa_filepath [file normalize [file join [pwd] ../fpga/design_1_wrapper.xsa]]
 platform create -name $PLATFORM\
-    -hw {../fpga/design_1_wrapper.xsa}\
+    -hw ${xsa_filepath}\
     -proc {ps7_cortexa9_0} -os {standalone} -out {./}
 
 platform write
@@ -87,3 +88,7 @@ sysproj build -name $SYS
 
 # ensure all projects are added to the workspace
 importprojects ./
+
+# rebuild platform to fix 'out of date' warning
+platform active $PLATFORM
+platform generate
